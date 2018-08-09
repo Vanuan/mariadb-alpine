@@ -9,7 +9,8 @@ RUN \
     # Add testing repo
     && echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories \
     # Install packages
-    && apk add --no-cache \
+    && apk update \
+    && apk add --no-cache curl wget \
         # Install utils
         pwgen openssl ca-certificates \
         # Installing needed libs
